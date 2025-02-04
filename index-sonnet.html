@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLP-1 Transition Program</title>
+    <style>
+        /* Modern CSS Reset and Variables */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary: #4F46E5;
+            --primary-dark: #4338CA;
+            --secondary: #7C3AED;
+            --text-dark: #111827;
+            --text-light: #4B5563;
+            --white: #FFFFFF;
+            --max-width: 1200px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            color: var(--text-dark);
+        }
+
+        .container {
+            width: 90%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Button Styles */
+        .button {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .button-primary {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .button-secondary:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Journey Cards */
+        .journey-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .journey-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .journey-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .journey-number {
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .journey-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .journey-text {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .journey-price {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.25rem;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background-color: #F3F4F6;
+            padding: 4rem 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-item {
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        .benefit-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .benefit-text {
+            color: var(--text-light);
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            padding: 4rem 0;
+            background-color: var(--white);
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .journey-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">GLP-1 Transition Program</a>
+            <div class="nav-links">
+                <a href="#journey" class="nav-link">Your Journey</a>
+                <a href="#benefits" class="nav-link">Benefits</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Transform Your Success:<br>Beyond Medication</h1>
+            <p>Expert guidance for safely transitioning off GLP-1 medications while maintaining your results. Our proven approach combines psychological techniques with personalized support for lasting success.</p>
+            <a href="#contact" class="button button-primary">Begin Your Journey</a>
+        </div>
+    </header>
+
+    <section class="section" id="journey">
+        <div class="container">
+            <h2 class="section-title">Your Journey With Us</h2>
+            <p class="section-subtitle">A comprehensive program designed to support your transition while maintaining your progress.</p>
+            
+            <div class="journey-grid">
+                <div class="journey-card">
+                    <div class="journey-number">1</div>
+                    <h3 class="journey-title">Personal Discovery Session</h3>
+                    <p class="journey-price">$100/initial session</p>
+                    <p class="journey-text">Share your unique story and goals while we review your current and past
+                        medication usage. Together, we'll create your vision for lasting success.</p>
+                  
+                </div>
+
+                <div class="journey-card">
+                    <div class="journey-number">2</div>
+                    <h3 class="journey-title">Customized Success Blueprint</h3>
+                    <p class="journey-price">$100/second session</p>
+                    <p class="journey-text">Develop your personalized transition timeline with sustainable strategies and powerful mindset tools based in the lastest psychological research.</p>
+                  
+                </div>
+
+                <div class="journey-card">
+                    <div class="journey-number">3</div>
+                    <h3 class="journey-title">Transformative Coaching</h3>    
+                    <p class="journey-price">$150/session</p>
+                    <p class="journey-text">Weekly empowerment sessions featuring evidence-based behavioral techniques and optional hypnotherapy for accelerated results and faster success.</p>
+             
+                </div>
+
+                <div class="journey-card">
+                    <div class="journey-number">4</div> 
+                    <h3 class="journey-title">Lasting Success Support</h3>
+                    <p class="journey-price">$50/month</p>
+                    <p class="journey-text">Connect with our supportive community, access ongoing expert guidance, and celebrate your continued success.</p>
+                 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Program</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3 class="benefit-title">Evidence-Based Approach</h3>
+                    <p class="benefit-text">Our program combines proven psychological techniques with personalized oversight for optimal results.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3 class="benefit-title">Proven Success Rate</h3>
+                    <p class="benefit-text">Our clients maintain their results through our comprehensive powerful support system and hypnotherapy integration.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3 class="benefit-title">Ongoing Support</h3>
+                    <p class="benefit-text">Join our thriving community of successful graduates who've maintained their results while embracing a medication-free lifestyle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Success Starts Here</h2>
+            <p class="section-subtitle" style="margin-bottom: .5rem;">Ready to take the next step in your wellness journey? We're here to support you. Contact us today to schedule your Personal Discovery Session.</p>
+            
+            <div class="contact-buttons" style="margin: 0rem 0;">
+                <a href="tel:1234567890" class="button button-primary">Call (123) 456-7890</a>
+                <a href="mailto:hello@glp1transition.com" class="button button-primary">Email Us</a>
+            </div>
+      
+            
+            <div class="form-container" style="background: #f8f9fa; border-radius: 8px; padding: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-top: 2rem;">
+              <form action="#" method="POST" class="contact-form">
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600; text-align: left;">Name <span style="color: red;">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required style="width:100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.375rem; font-size: 1rem;">
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600; text-align: left;">Email <span style="color: red;">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required style="width:100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.375rem; font-size: 1rem;">
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: 600; text-align: left;">Phone <span style="color: red;">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required style="width:100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.375rem; font-size: 1rem;">
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="notes" style="display: block; margin-bottom: 0.5rem; font-weight: 600; text-align: left;">Notes</label>
+                    <textarea id="notes" name="notes" placeholder="Additional notes (optional)" rows="4" style="width:100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.375rem; font-size: 1rem;"></textarea>
+                </div>
+                <div class="form-group" style="text-align: center;">
+                    <button type="submit" class="button button-primary" style="padding: 0.75rem 2rem;">Submit</button>
+                </div>
+              </form>
+            </div>
+            <p class="privacy-disclaimer" style="font-size: 0.875rem; color: var(--text-light); text-align: center; margin-top: 1rem;">
+                We will not sell or use the information provided in any way other than to set up an initial consultation.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 GLP-1 Transition Program. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
