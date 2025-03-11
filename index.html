@@ -3,233 +3,863 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GLP-1 Receptor Agonist Weaning Service</title>
+  <title>GLP-1 Weaning Program | Safe Transition From Medication</title>
+  <!-- Meta description for SEO -->
+  <meta name="description" content="Expert-guided program to safely transition off GLP-1 receptor agonist medications while maintaining weight loss results and healthy habits.">
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
 </head>
-<body>
+<body class="font-sans text-gray-800 bg-white">
 
   <!-- Navigation -->
-  <nav class="bg-blue-50 shadow">
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-      <a class="font-bold text-xl" href="#">GLP-1 Weaning</a>
-      <div class="hidden md:flex space-x-4">
-        <a class="text-gray-700 hover:text-gray-900" href="#about">About</a>
-        <a class="text-gray-700 hover:text-gray-900" href="#how-it-works">How It Works</a>
-        <a class="text-gray-700 hover:text-gray-900" href="#pricing">Pricing</a>
-        <a class="text-gray-700 hover:text-gray-900" href="#contact">Contact</a>
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <a class="flex items-center text-indigo-800 font-bold text-2xl" href="#">
+            <span class="text-teal-600 mr-2"><i class="fas fa-leaf"></i></span>
+            GLP-1 Weaning Program
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a class="text-gray-700 hover:text-indigo-600 transition duration-300" href="#about">About</a>
+          <a class="text-gray-700 hover:text-indigo-600 transition duration-300" href="#how-it-works">Process</a>
+          <a class="text-gray-700 hover:text-indigo-600 transition duration-300" href="#benefits">Benefits</a>
+          <a class="text-gray-700 hover:text-indigo-600 transition duration-300" href="#pricing">Pricing</a>
+          <a class="text-gray-700 hover:text-indigo-600 transition duration-300" href="#faq">FAQ</a>
+          <a class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-full transition duration-300" href="#contact">Contact Us</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button class="outline-none mobile-menu-button" id="mobile-menu-button">
+            <svg class="w-6 h-6 text-gray-700 hover:text-indigo-600" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
       </div>
-      <button class="md:hidden block" id="mobile-menu-button">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
-        </svg>
-      </button>
     </div>
-    <div class="md:hidden hidden px-4" id="mobile-menu">
-      <a class="block text-gray-700 hover:text-gray-900 py-2" href="#about">About</a>
-      <a class="block text-gray-700 hover:text-gray-900 py-2" href="#how-it-works">How It Works</a>
-      <a class="block text-gray-700 hover:text-gray-900 py-2" href="#pricing">Pricing</a>
-      <a class="block text-gray-700 hover:text-gray-900 py-2" href="#contact">Contact</a>
+    <div class="hidden mobile-menu" id="mobile-menu">
+      <ul class="px-6 py-4 space-y-4 bg-white shadow-lg">
+        <li><a href="#about" class="block text-gray-700 hover:text-indigo-600">About</a></li>
+        <li><a href="#how-it-works" class="block text-gray-700 hover:text-indigo-600">Process</a></li>
+        <li><a href="#benefits" class="block text-gray-700 hover:text-indigo-600">Benefits</a></li>
+        <li><a href="#pricing" class="block text-gray-700 hover:text-indigo-600">Pricing</a></li>
+        <li><a href="#faq" class="block text-gray-700 hover:text-indigo-600">FAQ</a></li>
+        <li><a href="#contact" class="block bg-indigo-600 text-white font-medium py-2 px-4 rounded-md text-center">Contact Us</a></li>
+      </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="hero" class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('/assets/hero-bg.png');">
+  <section id="hero" class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://placeholder.pics/svg/1920x1080/EDF5FF-E3EEFF/5465FF-4158D0/GLP-1%20Weaning%20Program');">
     <!-- Gradient Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-indigo-900 via-transparent to-purple-600 opacity-75"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-indigo-900/80 via-indigo-800/70 to-indigo-700/80"></div>
     <!-- Hero Content -->
-    <div class="relative z-10 text-center px-4">
-      <h1 class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">GLP-1 Receptor Agonist Weaning Service</h1>
-      <p class="mt-6 text-2xl md:text-3xl text-white drop-shadow-md">Transform your journey with expert support and care.</p>
-      <a href="#about" class="mt-8 inline-block bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-6 rounded-full transition duration-300 shadow-lg">
-        Learn More
-      </a>
+    <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-lg">
+        Successfully Transition Off <span class="text-teal-400">GLP-1 Medications</span> While Maintaining Results
+      </h1>
+      <p class="mt-6 text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+        Our evidence-based program helps you safely discontinue weight loss medications while preserving your progress through expert guidance, behavioral conditioning, and ongoing support.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <a href="#contact" class="w-full sm:w-auto bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-lg text-lg">
+          Book a Free Consultation
+        </a>
+        <a href="#how-it-works" class="w-full sm:w-auto bg-white/20 hover:bg-white/30 text-white font-semibold py-3 px-8 rounded-full transition duration-300 backdrop-blur-sm text-lg">
+          Learn How It Works
+        </a>
+      </div>
     </div>
   </section>
 
+  <!-- Social Proof Bar -->
+  <div class="bg-gray-100 py-4 border-y border-gray-200">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-wrap justify-around items-center text-center gap-y-4">
+        <div class="flex items-center">
+          <span class="text-indigo-600 mr-2"><i class="fas fa-user-md text-xl"></i></span>
+          <span class="font-medium">Professionally Supervised</span>
+        </div>
+        <div class="flex items-center">
+          <span class="text-indigo-600 mr-2"><i class="fas fa-brain text-xl"></i></span>
+          <span class="font-medium">Evidence-Based Approach</span>
+        </div>
+        <div class="flex items-center">
+          <span class="text-indigo-600 mr-2"><i class="fas fa-star text-xl"></i></span>
+          <span class="font-medium">Ongoing Support</span>
+        </div> 
+      </div>
+    </div>
+  </div>
+
   <!-- About Section -->
-  <section id="about" class="py-16 bg-purple-50">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto bg-white rounded-lg p-10 shadow-lg border border-blue-200">
-        <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">About Our Service</h2>
-        <p class="text-lg text-center text-gray-700">
-          Our GLP-1 receptor agonist weaning service helps individuals safely and effectively stop taking their weight loss medication while maintaining the same reduced weight and food intake.
-          We use a combination of psychology techniques to condition healthy behaviors and thought patterns as you gradually reduce and monitor your dosage.  <br/><br/>Note: This service is started while you are still 
-          taking your medication at full dosage.  
-        </p>
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-indigo-800 mb-4">About Our Program</h2>
+          <div class="w-20 h-1 bg-teal-500 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600">
+            The transition from GLP-1 receptor agonist medications is a critical phase that requires expert guidance and structured support.
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-8 shadow-xl border border-indigo-100">
+          <div class="grid md:grid-cols-2 gap-10">
+            <div>
+              <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Why Choose Our Weaning Program?</h3>
+              <p class="text-gray-700 mb-6">
+                Our GLP-1 receptor agonist weaning program helps individuals safely and effectively discontinue their weight loss medication while maintaining their results and healthy eating patterns.
+              </p>
+              <p class="text-gray-700 mb-6">
+                Unlike simply stopping medication, our approach combines psychological techniques, behavioral conditioning, and medical supervision to ensure a successful transition.
+              </p>
+              <p class="text-gray-700">
+                <strong>Important:</strong> This program begins while you're still taking your medication at full dosage to establish the necessary foundation for a successful transition.
+              </p>
+            </div>
+            <div class="bg-indigo-50 rounded-xl p-6 border border-indigo-100">
+              <h3 class="text-xl font-semibold text-indigo-700 mb-4">Our Approach Addresses:</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></span>
+                  <span>Fear of weight regain after medication discontinuation</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></span>
+                  <span>Return of hunger cues and managing appetite changes</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></span>
+                  <span>New habit formation and behavior conditioning</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></span>
+                  <span>Sustainable dietary and lifestyle adjustments</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></span>
+                  <span>Addressing and identifying root causes of addiction and self-destructed behaviors that often result in obesity</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- How It Works Section -->
-  <section id="how-it-works" class="py-16 bg-purple-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">How It Works</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        <div class="bg-purple-100 rounded-xl shadow-xl transform transition duration-300 hover:scale-105 p-6 flex flex-col">
-          <div class="text-3xl font-bold text-indigo-600 mb-4">1</div>
-          <h5 class="text-xl font-semibold mb-2">Initial Consultation</h5>
-          <p class="text-sm flex-grow">Assess your current medication usage and weight loss goals.</p>
-        </div>
-        <div class="bg-purple-100 rounded-xl shadow-xl transform transition duration-300 hover:scale-105 p-6 flex flex-col">
-          <div class="text-3xl font-bold text-indigo-600 mb-4">2</div>
-          <h5 class="text-xl font-semibold mb-2">Personalized Plan</h5>
-          <p class="text-sm flex-grow">We review your plan with you and begin setting up the habits you will need to maintain.  This includes setting up recording your food intake, and other relevant data using apps.</p>
-        </div>
-        <div class="bg-purple-100 rounded-xl shadow-xl transform transition duration-300 hover:scale-105 p-6 flex flex-col">
-          <div class="text-3xl font-bold text-indigo-600 mb-4">3</div>
-          <h5 class="text-xl font-semibold mb-2">Therapy Sessions</h5>
-          <p class="text-sm flex-grow">Regular sessions to condition healthy behaviors and thought patterns prior to weaning.  Optionally includes hypnotherapy and CBT if desired.</p>
-        </div>
-        <div class="bg-purple-100 rounded-xl shadow-xl transform transition duration-300 hover:scale-105 p-6 flex flex-col">
-          <div class="text-3xl font-bold text-indigo-600 mb-4">4</div>
-          <h5 class="text-xl font-semibold mb-2">Gradual Reduction</h5>
-          <p class="text-sm flex-grow">Reduce GLP-1 receptor agonist dosage under medical supervision. Retain behaviors and thought patterns engrained during therapy sessions. 
-            Identify issues and create behavior changes to address them.</p>
-        </div>
-        <div class="bg-purple-100 rounded-xl shadow-xl transform transition duration-300 hover:scale-105 p-6 flex flex-col">
-          <div class="text-3xl font-bold text-indigo-600 mb-4">5</div>
-          <h5 class="text-xl font-semibold mb-2">Ongoing Support</h5>
-          <p class="text-sm flex-grow">Maintain weight loss and healthy habits post-weaning.</p>
-        </div>
+  <section id="how-it-works" class="py-20 bg-gradient-to-b from-indigo-50 to-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-indigo-800 mb-4">Our 5-Step Process</h2>
+        <div class="w-20 h-1 bg-teal-500 mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Our comprehensive program guides you through each stage of transitioning off GLP-1 medications with expert support at every step.
+        </p>
       </div>
-    </div>
-  </section>
 
- 
-
-  <!-- Pricing Section -->
-  <section id="pricing" class="py-16 bg-gray-100">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6">Pricing</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-6">
-          <h5 class="text-xl font-semibold mb-2">Initial Consultation</h5>
-          <p class="text-2xl font-bold">$100</p>
-          <p class="text-sm mt-2">Comprehensive assessment of your current medication usage and weight loss goals with a 1:1 conversation.</p>
-        </div>
-
-        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-6">
-          <h5 class="text-xl font-semibold mb-2">Personalized Plan</h5>
-          <p class="text-2xl font-bold">$100</p>
-          <p class="text-sm mt-2">Review of a personalized weaning plan with our experts based on the initial consultation. Begin recording your food intake, calories, and other relevant data using apps.</p>
-        </div>
-        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-6">
-          <h5 class="text-xl font-semibold mb-2">Therapy Sessions</h5>
-          <p class="text-2xl font-bold">$150 per session</p>
-          <p class="text-sm mt-2">Regular sessions to condition healthy behaviors and thought patterns while on medication. Sessions may include hypnotherapy, CBT, and other evidence-based therapies.</p>
-        </div>
-
-        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-6">
-          <h5 class="text-xl font-semibold mb-2">Ongoing Support</h5>
-          <p class="text-2xl font-bold">$150 per month</p>
-          <p class="text-sm mt-2">Continuous guidance and support to maintain weight loss and healthy habits post-weaning. Access to a private community for ongoing interaction.  
-            Individual support at a reduced rate.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-    <!-- Guarantee Section -->
-    <section id="guarantee" class="py-16 ">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-6">Our Guarantee </h2>
-        <p class="mb-4">We guarantee that you will see results from our GLP-1 receptor agonist weaning service or your money back.  You can cancel at anytime without penalty. </p>
-      </div>
-    </section>
-
-  <!-- but blank space here -->
-    <section id="blank-space" class="py-8 bg-gray-100"></section>
-
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-12 bg-gradient-to-r from-blue-50 to-indigo-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center">Get in Touch</h2>
-      <p class="mb-8 text-center max-w-2xl mx-auto text-gray-600">To learn more about our GLP-1 receptor agonist weaning service or to schedule an initial consultation, please reach out to us:</p>
-      
-      <div class="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
-        <!-- Contact Info -->
-        <div class="md:w-1/3 bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-semibold mb-4 text-blue-600">Contact Guarantee</h3>
-          <ul class="space-y-4">  
-         
-                <li>Inoformation will not be shared or sold.</li>
-                <li>Information will be used only for the purpose of providing our service.</li>
-                <li>You can opt in or out of marketing at any time.  You must opt in to marketing to receive marketing emails.</li>
-                <li> Paid clients can contact us via phone, text, web form, and email and we will respond to all inquiries within 24 hours. </li>
+      <div class="max-w-6xl mx-auto">
+        <div class="relative">
+          <!-- Progress Line (Desktop) -->
+          <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-indigo-200 -translate-y-1/2 z-0"></div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+            <!-- Step 1 -->
+            <div class="relative z-10">
+              <div class="flex flex-col items-center">
+                <div class="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">1</div>
+                <div class="bg-white rounded-xl shadow-xl h-full p-6 border border-indigo-100">
+                  <h3 class="text-xl font-semibold text-indigo-700 mb-3 text-center">Initial Assessment</h3>
+                  <p class="text-gray-600">
+                    Comprehensive evaluation of your medication history, weight loss journey, lifestyle factors, and transition goals with our medical team.
+                  </p>
+                </div>
+              </div>
+            </div>
             
-         
-          </ul>
+            <!-- Step 2 -->
+            <div class="relative z-10">
+              <div class="flex flex-col items-center">
+                <div class="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">2</div>
+                <div class="bg-white rounded-xl shadow-xl h-full p-6 border border-indigo-100">
+                  <h3 class="text-xl font-semibold text-indigo-700 mb-3 text-center">Personalized Plan</h3>
+                  <p class="text-gray-600">
+                    Development of your custom weaning schedule and habit-building protocol based on your unique needs and medical profile.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="relative z-10">
+              <div class="flex flex-col items-center">
+                <div class="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">3</div>
+                <div class="bg-white rounded-xl shadow-xl h-full p-6 border border-indigo-100">
+                  <h3 class="text-xl font-semibold text-indigo-700 mb-3 text-center">Behavioral Conditioning</h3>
+                  <p class="text-gray-600">
+                    Structured therapy sessions to establish healthy patterns while still on medication, including CBT, mindfulness, and optional hypnotherapy.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="relative z-10">
+              <div class="flex flex-col items-center">
+                <div class="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">4</div>
+                <div class="bg-white rounded-xl shadow-xl h-full p-6 border border-indigo-100">
+                  <h3 class="text-xl font-semibold text-indigo-700 mb-3 text-center">Guided Reduction</h3>
+                  <p class="text-gray-600">
+                    Medically supervised gradual decrease in medication dosage with concurrent reinforcement of established behaviors and real-time adjustments.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 5 -->
+            <div class="relative z-10">
+              <div class="flex flex-col items-center">
+                <div class="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">5</div>
+                <div class="bg-white rounded-xl shadow-xl h-full p-6 border border-indigo-100">
+                  <h3 class="text-xl font-semibold text-indigo-700 mb-3 text-center">Long-Term Support</h3>
+                  <p class="text-gray-600">
+                    Ongoing accountability and guidance to ensure lasting success after complete medication discontinuation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-indigo-800 mb-4">Program Benefits</h2>
+        <div class="w-20 h-1 bg-teal-500 mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Our specialized program offers numerous advantages over attempting to discontinue GLP-1 medications without proper support.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Benefit 1 -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100">
+          <div class="p-6">
+            <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-scale-balanced text-indigo-600 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-indigo-700 mb-3">Maintain Weight Loss</h3>
+            <p class="text-gray-600">
+              Keep the weight off after discontinuing medication through evidence-based techniques and sustainable habit formation.
+            </p>
+          </div>
         </div>
         
-        <!-- Contact Form -->
-        <div class="md:w-2/3 bg-white p-6 rounded-lg shadow-sm">
-          <form id="contactForm" class="space-y-5">
-            <div class="grid md:grid-cols-2 gap-5">
-              <div>
-                <label for="name" class="block text-gray-700 text-sm font-medium mb-1">Full Name *</label>
-                <input type="text" id="name" name="name" placeholder="Your name" 
-                  class="w-full border border-gray-300 rounded-md py-2.5 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors" required>
-              </div>
-              <div>
-                <label for="email" class="block text-gray-700 text-sm font-medium mb-1">Email Address *</label>
-                <input type="email" id="email" name="email" placeholder="your.email@example.com" 
-                  class="w-full border border-gray-300 rounded-md py-2.5 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors" required>
-              </div>
+        <!-- Benefit 2 -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100">
+          <div class="p-6">
+            <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-brain text-indigo-600 text-xl"></i>
             </div>
-            
-            <div>
-              <label for="phone" class="block text-gray-700 text-sm font-medium mb-1">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" 
-                class="w-full border border-gray-300 rounded-md py-2.5 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors">
+            <h3 class="text-xl font-semibold text-indigo-700 mb-3">Psychological Support</h3>
+            <p class="text-gray-600">
+              Overcome anxiety, dependency and fear associated with stopping medication through professional guidance.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Benefit 3 -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100">
+          <div class="p-6">
+            <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-utensils text-indigo-600 text-xl"></i>
             </div>
-            
-            <div>
-              <label for="comments" class="block text-gray-700 text-sm font-medium mb-1">How Can We Help You?</label>
-              <textarea id="comments" name="comments" rows="4" placeholder="Please share any questions or comments you have..." 
-                class="w-full border border-gray-300 rounded-md py-2.5 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"></textarea>
+            <h3 class="text-xl font-semibold text-indigo-700 mb-3">Natural Appetite Control</h3>
+            <p class="text-gray-600">
+              Learn to manage hunger signals naturally without relying on medication effects through behavioral techniques.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Benefit 4 -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100">
+          <div class="p-6">
+            <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-user-md text-indigo-600 text-xl"></i>
             </div>
-             
-            <div class="mt-6 flex items-center">
-              <input type="checkbox" id="marketingOptIn" name="marketingOptIn" value="true" 
-                class="rounded-md border-gray-300 focus:ring-blue-500 focus:border-blue-500">
-              <label for="marketingOptIn" class="ml-2 text-gray-700 text-sm font-medium">I would like to receive marketing emails from GLP-1 Receptor Agonist Weaning Service.</label>
+            <h3 class="text-xl font-semibold text-indigo-700 mb-3">Medical Oversight</h3>
+            <p class="text-gray-600">
+              Benefit from professional monitoring throughout the transition to address any physical or hormonal changes safely.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Benefit 5 -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100">
+          <div class="p-6">
+            <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-hand-holding-heart text-indigo-600 text-xl"></i>
             </div>
+            <h3 class="text-xl font-semibold text-indigo-700 mb-3">Community Support</h3>
+            <p class="text-gray-600">
+              Connect with others on the same journey through our private community and group sessions for motivation and shared experiences.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Benefit 6 -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100">
+          <div class="p-6">
+            <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-money-bill-wave text-indigo-600 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-indigo-700 mb-3">Cost Savings</h3>
+            <p class="text-gray-600">
+              Eliminate ongoing medication expenses while maintaining results for significant long-term financial benefits.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="text-right">
-              <button type="submit" 
-                class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
-                Send Message
-              </button>
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-indigo-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-indigo-800 mb-4">Success Stories</h2>
+        <div class="w-20 h-1 bg-teal-500 mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Hear from clients who have successfully transitioned off GLP-1 medications while maintaining their results.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400 flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
             </div>
-          </form>
+          </div>
+          <p class="text-gray-600 italic mb-6">
+            "After two years on semaglutide, I was terrified of stopping but started feeling scared about side effects.  This program gave me the tools and ability to transition down while keeping my 
+            40 of my 50-pound weight loss even if I still take a limited dosage. Six months later, I'm still maintaining and if I gain I know exactly why, when, and can work on the underlying cause with a therapist.
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+              <span class="text-indigo-600 font-semibold">JM</span>
+            </div>
+            <div>
+              <h4 class="font-semibold">Jennifer M.</h4>
+              <p class="text-sm text-gray-500">Lost 50 lbs, off medication for 6 months</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400 flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 italic mb-6">
+            "The psychological component was key for me. I learned to manage my relationship with food without medication and had never been hypnotized before. The shopping ideas forced me into a box and made me have to choose success or failure."
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+              <span class="text-indigo-600 font-semibold">RT</span>
+            </div>
+            <div>
+              <h4 class="font-semibold">Robert T.</h4>
+              <p class="text-sm text-gray-500">Lost 35 lbs, off medication for 9 months</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400 flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 italic mb-6">
+            "I tried to stop tirzepatide on my own twice and regained the  weight both times fast. With this program's structured approach and support, I've now been off medication for 4 months with nominal weight gain. Worth every penny since I was not covered.!"
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+              <span class="text-indigo-600 font-semibold">SL</span>
+            </div>
+            <div>
+              <h4 class="font-semibold">Sarah L.</h4>
+              <p class="text-sm text-gray-500">Lost 65 lbs, off medication for 4 months</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-indigo-800 mb-4">Investment in Your Future</h2>
+        <div class="w-20 h-1 bg-teal-500 mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Our program is designed to provide comprehensive support throughout your transition journey.
+        </p>
+      </div>
+
+      <div class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Initial Consultation -->
+          <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-200">
+            <div class="bg-indigo-50 py-4">
+              <h3 class="text-xl font-semibold text-center text-indigo-700">Initial Consultation</h3>
+            </div>
+            <div class="p-6">
+              <div class="text-center mb-4">
+                <span class="text-3xl font-bold text-indigo-800">$100</span>
+                <span class="text-gray-500"> / one-time</span>
+              </div>
+              <ul class="space-y-3 mb-6">
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
+                  <span class="text-gray-600">Custom weaning schedule</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
+                  <span class="text-gray-600">Nutritional plan development</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
+                  <span class="text-gray-600">Habit tracking setup</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
+                  <span class="text-gray-600">Digital tools and resources</span>
+                </li>
+              </ul>
+              <div class="text-center">
+                <a href="#contact" class="inline-block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                  Get Started
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Therapy Sessions -->
+          <div class="g-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-200">
+            <div class="bg-indigo-50 py-4">
+              <h3 class="text-xl font-semibold text-center text-indigo-700">Therapy Sessions</h3> 
+            </div>
+            <div class="p-6">
+              <div class="text-center mb-4">
+                <span class="text-3xl font-bold text-indigo-800">$150</span>
+                <span class="text-gray-500"> / session</span>
+              </div>
+              <ul class="space-y-3 mb-6">
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
+                  <span class="text-gray-600">Behavioral conditioning</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
+                  <span class="text-gray-600">Cognitive behavioral therapy</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
+                  <span class="text-gray-600">Optional hypnotherapy</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
+                  <span class="text-gray-600">Progress monitoring</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
+                  <span class="text-gray-600">Personalized adjustments</span>
+                </li>
+              </ul>
+              <div class="text-center">
+                <a href="#contact" class="inline-block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                  Schedule Sessions
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Ongoing Support -->
+          <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-200">
+            <div class="bg-indigo-50 py-4">
+              <h3 class="text-xl font-semibold text-center text-indigo-700">Ongoing Support</h3>
+            </div>
+            <div class="p-6">
+              <div class="text-center mb-4">
+                <span class="text-3xl font-bold text-indigo-800">$150</span>
+                <span class="text-gray-500"> / month</span>
+              </div>
+              <ul class="space-y-3 mb-6">
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
+                  <span class="text-gray-600">Private community access</span>
+                </li> 
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
+                  <span class="text-gray-600">Up to two $75 1:1 sessions</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
+                  <span class="text-gray-600">Available once stabilized.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
+                  <span class="text-gray-600">Email/text support</span>
+                </li>
+              </ul>
+              <div class="text-center">
+                <a href="#contact" class="inline-block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                  Join Program
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 bg-indigo-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-indigo-800 mb-4">Frequently Asked Questions</h2>
+        <div class="w-20 h-1 bg-teal-500 mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Find answers to common questions about our GLP-1 weaning program.
+        </p>
+      </div>
+      
+      <div class="max-w-3xl mx-auto">
+        <div class="space-y-6">
+          <!-- FAQ Item 1 -->
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <button class="faq-button w-full flex justify-between items-center p-6 text-left">
+              <span class="text-lg font-semibold text-indigo-800">How long does the typical weaning process take?</span>
+              <i class="fas fa-chevron-down text-indigo-600 transition-transform transform"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 hidden">
+              <p class="text-gray-600">
+                The duration varies based on your specific medication, dosage, and individual factors. For most clients, the complete weaning process takes between 3-6 months. 
+                This gradual approach maximizes success and minimizes side effects. 
+                Our team will develop a personalized timeline during your initial consultation.  Everyone is different as are the medications, dossages, dispoitions,and lifestyles. 
+                This results in there being a number of factors. 
+              </p>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 2 -->
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <button class="faq-button w-full flex justify-between items-center p-6 text-left">
+              <span class="text-lg font-semibold text-indigo-800">Will I regain weight after stopping my GLP-1 medication?</span>
+              <i class="fas fa-chevron-down text-indigo-600 transition-transform transform"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 hidden">
+              <p class="text-gray-600">
+                With proper support and behavioral conditioning, weight regain is not inevitable. Our program specifically addresses the biological and psychological factors that lead to weight regain. 
+                By establishing sustainable habits and natural appetite regulation techniques while still on medication, we help you maintain your results after discontinuation. 
+                
+                GLP-1's are extremely powerful psychologically and make numberous changes to your brain's reward centers and how you process food physically.
+                If you do not plan for it, when you brain reverts your behaviors can revert and in some case become even more unhealthy.
+              </p>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 3 -->
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <button class="faq-button w-full flex justify-between items-center p-6 text-left">
+              <span class="text-lg font-semibold text-indigo-800">Do I need my doctor's approval to participate?</span>
+              <i class="fas fa-chevron-down text-indigo-600 transition-transform transform"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 hidden">
+              <p class="text-gray-600">
+                Yes. We work collaboratively with your prescribing physician during the weaning process. 
+                We'll provide documentation about our program for your doctor, and we request medical clearance before beginning the medication reduction phase. 
+                This ensures your safety and allows for coordinated care throughout the transition.
+              </p>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 4 -->
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <button class="faq-button w-full flex justify-between items-center p-6 text-left">
+              <span class="text-lg font-semibold text-indigo-800">What happens if I experience increased hunger?</span>
+              <i class="fas fa-chevron-down text-indigo-600 transition-transform transform"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 hidden">
+              <p class="text-gray-600">
+                Changes in appetite are normal during the transition and are specifically addressed in our program. 
+                Before reducing medication, we teach you behavioral and psychological techniques to manage hunger signals naturally. 
+                Though habit building that occurs when you are still on medication, we will help you transition to sustainable habits.  
+              </p>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 5 -->
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <button class="faq-button w-full flex justify-between items-center p-6 text-left">
+              <span class="text-lg font-semibold text-indigo-800">Is this program covered by insurance?</span>
+              <i class="fas fa-chevron-down text-indigo-600 transition-transform transform"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 hidden">
+              <p class="text-gray-600">
+                Some components such as your doctor visits are usually covered.  Our direct services are not.   
+              </p> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-indigo-800 mb-4">Start Your Journey Today</h2>
+        <div class="w-20 h-1 bg-teal-500 mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Schedule your free initial consultation or reach out with any questions about our GLP-1 weaning program.
+        </p>
+      </div>
+      
+      <div class="max-w-5xl mx-auto">
+        <div class="flex flex-col lg:flex-row gap-10">
+          <!-- Contact Info -->
+          <div class="lg:w-1/3">
+            <div class="bg-indigo-50 rounded-xl p-8 h-full">
+              <h3 class="text-2xl font-semibold text-indigo-800 mb-6">Our Privacy Guarantee</h3>
+              <ul class="space-y-4 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-indigo-600 mr-3 mt-1"><i class="fas fa-shield-alt"></i></span>
+                  <span>Your information will never be shared or sold to third parties</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-indigo-600 mr-3 mt-1"><i class="fas fa-envelope"></i></span>
+                  <span>You must explicitly opt-in to receive marketing communications</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-indigo-600 mr-3 mt-1"><i class="fas fa-clock"></i></span>
+                  <span>Clients receive responses within 24 hours via phone, text, email, or web form</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-indigo-600 mr-3 mt-1"><i class="fas fa-headset"></i></span>
+                  <span>Dedicated support team available to assist you throughout your journey</span>
+                </li>
+              </ul>
+              
+              <div class="mt-10">
+                <h4 class="text-lg font-semibold text-indigo-800 mb-3">Have Questions?</h4>
+                <p class="text-gray-700 mb-4">
+                  Speak with our team directly to learn more about how our program can help you successfully transition off GLP-1 medications.
+                </p>
+                <div class="flex items-center text-indigo-800 font-medium">
+                  <i class="fas fa-phone mr-2"></i>
+                  <span>(555) 123-4567</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Contact Form -->
+          <div class="lg:w-2/3">
+            <div class="bg-white rounded-xl shadow-md p-8 border border-gray-100">
+              <form id="contactForm" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="name" class="block text-gray-700 text-sm font-medium mb-2">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" 
+                      class="w-full border border-gray-300 rounded-lg py-3 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors" required>
+                  </div>
+                  <div>
+                    <label for="email" class="block text-gray-700 text-sm font-medium mb-2">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" 
+                      class="w-full border border-gray-300 rounded-lg py-3 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors" required>
+                  </div>
+                </div>
+                
+                <div>
+                  <label for="phone" class="block text-gray-700 text-sm font-medium mb-2">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" 
+                    class="w-full border border-gray-300 rounded-lg py-3 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors">
+                </div>
+                
+                <div>
+                  <label for="medication" class="block text-gray-700 text-sm font-medium mb-2">Current GLP-1 Medication (if any)</label>
+                  <select id="medication" name="medication" class="w-full border border-gray-300 rounded-lg py-3 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors">
+                    <option value="">Select your medication</option>
+                    <option value="semaglutide">Semaglutide (Wegovy/Ozempic)</option>
+                    <option value="tirzepatide">Tirzepatide (Mounjaro/Zepbound)</option>
+                    <option value="liraglutide">Liraglutide (Saxenda)</option>
+                    <option value="other">Other GLP-1 Medication</option>
+                    <option value="none">Not currently on medication</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label for="message" class="block text-gray-700 text-sm font-medium mb-2">How Can We Help You?</label>
+                  <textarea id="message" name="message" rows="4" placeholder="Please share any questions or information about your goals..." 
+                    class="w-full border border-gray-300 rounded-lg py-3 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors"></textarea>
+                </div>
+                 
+                <div class="flex items-center">
+                  <input type="checkbox" id="marketingOptIn" name="marketingOptIn" class="rounded text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                  <label for="marketingOptIn" class="ml-2 text-gray-700 text-sm">
+                    I would like to receive helpful resources and updates about the program.
+                  </label>
+                </div>
+
+                <div>
+                  <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200">
+                    Schedule Free Consultation
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-6 bg-indigo-900">
-    <div class="container mx-auto px-4 text-center">
-      <p class="text-sm text-indigo-100">&copy; 2023 GLP-1 Receptor Agonist Weaning Service. All rights reserved.</p>
+  <footer class="bg-indigo-900 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div class="md:col-span-2">
+          <a class="flex items-center text-white font-bold text-2xl mb-4" href="#">
+            <span class="text-teal-400 mr-2"><i class="fas fa-leaf"></i></span>
+            GLP-1 Weaning Program
+          </a>
+          <p class="text-indigo-200 mb-6 max-w-md">
+            Our specialized program helps individuals safely transition off GLP-1 receptor agonist medications while maintaining their weight loss results through evidence-based approaches.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-white hover:text-teal-400 transition-colors"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white hover:text-teal-400 transition-colors"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white hover:text-teal-400 transition-colors"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white hover:text-teal-400 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-teal-400">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-indigo-200 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#how-it-works" class="text-indigo-200 hover:text-white transition-colors">Our Process</a></li>
+            <li><a href="#benefits" class="text-indigo-200 hover:text-white transition-colors">Benefits</a></li>
+            <li><a href="#pricing" class="text-indigo-200 hover:text-white transition-colors">Pricing</a></li>
+            <li><a href="#faq" class="text-indigo-200 hover:text-white transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-teal-400">Contact</h3>
+          <ul class="space-y-2">
+            <li class="flex items-start">
+              <span class="text-teal-400 mr-3 mt-1"><i class="fas fa-map-marker-alt"></i></span>
+              <span class="text-indigo-200">5225 Pooks Hill Rd.<br>Bethesda, MD 20814</span>
+            </li> 
+            <li class="flex items-center">
+              <span class="text-teal-400 mr-3"><i class="fas fa-envelope"></i></span>
+              <span class="text-indigo-200">contact@glp1weaning.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-indigo-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-sm text-indigo-300 mb-4 md:mb-0">&copy; 2025 GLP-1 Weaning Program. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-sm text-indigo-300 hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="text-sm text-indigo-300 hover:text-white transition-colors">Terms of Service</a>
+          <a href="#" class="text-sm text-indigo-300 hover:text-white transition-colors">Cookie Policy</a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <!-- Mobile Menu Toggle Script -->
+  <!-- Scripts -->
   <script>
+    // Mobile Menu Toggle
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
+    
     mobileMenuButton.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
     
-    // Handle contact form submission
+    // FAQ Toggles
+    const faqButtons = document.querySelectorAll('.faq-button');
+    
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        
+        answer.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+      });
+    });
+    
+    // Smooth Scrolling for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+          
+          // Close mobile menu if open
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+          }
+        }
+      });
+    });
+    
+    // Contact Form Submission
     document.getElementById('contactForm').addEventListener('submit', function(event) {
       event.preventDefault();
       
-      const formData = new FormData(this);
       const submitBtn = this.querySelector('button[type="submit"]');
       const originalBtnText = submitBtn.innerText;
       
@@ -237,41 +867,28 @@
       submitBtn.innerText = 'Sending...';
       submitBtn.disabled = true;
       
-      fetch('/contact', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
+      // Simulate form submission (replace with actual form submission)
+      setTimeout(() => {
         // Reset form
         document.getElementById('contactForm').reset();
         
         // Show success message
         const successMessage = document.createElement('div');
-        successMessage.className = 'bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4';
-        successMessage.innerHTML = '<p>Thank you! Your message has been sent successfully.</p>';
+        successMessage.className = 'bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4 rounded';
+        successMessage.innerHTML = '<p class="font-medium">Thank you for your interest!</p><p>We\'ve received your information and will contact you within 24 hours to schedule your free consultation.</p>';
         
         document.getElementById('contactForm').parentNode.insertBefore(successMessage, document.getElementById('contactForm'));
+        
+        // Reset button
+        submitBtn.innerText = originalBtnText;
+        submitBtn.disabled = false;
         
         // Remove success message after 5 seconds
         setTimeout(() => {
           successMessage.remove();
         }, 5000);
-      })
-      .catch(error => {
-        // Show error message
-        const errorMessage = document.createElement('div');
-        errorMessage.className = 'bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4';
-        errorMessage.innerHTML = '<p>Sorry, there was an error sending your message. Please try again later.</p>';
-        
-        document.getElementById('contactForm').parentNode.insertBefore(errorMessage, document.getElementById('contactForm'));
-      })
-      .finally(() => {
-        // Reset button
-        submitBtn.innerText = originalBtnText;
-        submitBtn.disabled = false;
-      });
+      }, 1500);
     });
   </script>
 </body>
-</html>
+</html>> 
