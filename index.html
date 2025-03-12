@@ -332,7 +332,11 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
+  <style>
+    section { margin-bottom: -5rem; }
+  </style>
+
+  <!-- Testimonials Section 
   <section class="py-20 bg-indigo-50">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
@@ -344,7 +348,7 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <!-- Testimonial 1 -->
+ 
         <div class="bg-white rounded-xl shadow-md p-6">
           <div class="flex items-center mb-4">
             <div class="text-yellow-400 flex">
@@ -370,7 +374,7 @@
           </div>
         </div>
         
-        <!-- Testimonial 2 -->
+    
         <div class="bg-white rounded-xl shadow-md p-6">
           <div class="flex items-center mb-4">
             <div class="text-yellow-400 flex">
@@ -395,7 +399,7 @@
           </div>
         </div>
         
-        <!-- Testimonial 3 -->
+    
         <div class="bg-white rounded-xl shadow-md p-6">
           <div class="flex items-center mb-4">
             <div class="text-yellow-400 flex">
@@ -422,8 +426,11 @@
       </div>
     </div>
   </section>
+-->
 
-  <!-- Pricing Section -->
+
+
+  <!-- Pricing Section --> 
   <section id="pricing" class="py-20 bg-white">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
@@ -434,8 +441,8 @@
         </p>
       </div>
 
-      <div class="max-w-5xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="max-w-5xl mx-auto flex flex-col items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           <!-- Initial Consultation -->
           <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-200">
@@ -445,7 +452,8 @@
             <div class="p-6">
               <div class="text-center mb-4">
                 <span class="text-3xl font-bold text-indigo-800">$100</span>
-                <span class="text-gray-500"> / one-time</span>
+                <span class="text-gray-500"> / one-time</span><br/>
+                <span class="text-gray-500">1 hour over Zoom</span>
               </div>
               <ul class="space-y-3 mb-6">
                 <li class="flex items-start">
@@ -481,7 +489,8 @@
             <div class="p-6">
               <div class="text-center mb-4">
                 <span class="text-3xl font-bold text-indigo-800">$150</span>
-                <span class="text-gray-500"> / session</span>
+                <span class="text-gray-500"> / session</span><br/>
+                <span class="text-gray-500">1 hour over Zoom</span>
               </div>
               <ul class="space-y-3 mb-6">
                 <li class="flex items-start">
@@ -494,7 +503,7 @@
                 </li>
                 <li class="flex items-start">
                   <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
-                  <span class="text-gray-600">Optional hypnotherapy</span>
+                  <span class="text-gray-600">Optional hypnotherapy with recordings*</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
@@ -520,25 +529,20 @@
             </div>
             <div class="p-6">
               <div class="text-center mb-4">
-                <span class="text-3xl font-bold text-indigo-800">$150</span>
-                <span class="text-gray-500"> / month</span>
+                <span class="text-3xl font-bold text-indigo-800">$75</span>
+                <span class="text-gray-500"> / session</span><br/>
+                <span class="text-gray-500">30 minutes </span><br/>
+                <span class="text-gray-500">Zoom, Email, and Text</span>
               </div>
               <ul class="space-y-3 mb-6">
+        
                 <li class="flex items-start">
                   <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
-                  <span class="text-gray-600">Private community access</span>
-                </li> 
-                <li class="flex items-start">
-                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
-                  <span class="text-gray-600">Up to two $75 1:1 sessions</span>
+                  <span class="text-gray-600">Only available after stabilization.</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
-                  <span class="text-gray-600">Available once stabilized.</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-teal-500 mr-3 mt-1"><i class="fas fa-check"></i></span>
-                  <span class="text-gray-600">Email/text support</span>
+                  <span class="text-gray-600">Email/text support (see faq)</span>
                 </li>
               </ul>
               <div class="text-center">
@@ -550,6 +554,17 @@
           </div>
         </div>
   
+ 
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <style>
+    section { margin-bottom: 2rem; }
+  </style>
 
   <!-- FAQ Section -->
   <section id="faq" class="py-20 bg-indigo-50">
@@ -639,6 +654,36 @@
               </p> 
             </div>
           </div>
+
+   
+          <!-- FAQ Item 6 -->
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <button class="faq-button w-full flex justify-between items-center p-6 text-left">
+              <span class="text-lg font-semibold text-indigo-800">How much email and text support is included?</span>
+              <i class="fas fa-chevron-down text-indigo-600 transition-transform transform"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 hidden">
+              <p class="text-gray-600">
+                We want to be responsive to your needs while also balancing our time doing support and keeping this affordable.  Email and text are billed at the rate of support sessions in blocks of 30 minutes. 
+              </p> 
+            </div>
+          </div>
+   
+          <!-- FAQ Item 7 -->
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <button class="faq-button w-full flex justify-between items-center p-6 text-left">
+              <span class="text-lg font-semibold text-indigo-800">What are hypnotherapy recordings?</span>
+              <i class="fas fa-chevron-down text-indigo-600 transition-transform transform"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 hidden">
+              <p class="text-gray-600">
+                Hypnotherapy can be used to reinforce habits and behaviors while you are medicated.  They are then used to help you maintain those habits as you transition off of medication. 
+                Hypnotherapy effectiveness varies wildly from person to person.  Some people will find it is all they need and it will tend tobe hightly cost effective in that case, 
+                while others will see little benifit and lean on other strategies. 
+                Recordings are usually 10-15 minutes long.  If custom, the cost is billed at the rate of thirty minutes per tape in most cases. 
+              </p> 
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -696,7 +741,7 @@
           <!-- Contact Form -->
           <div class="lg:w-2/3">
             <div class="bg-white rounded-xl shadow-md p-8 border border-gray-100">
-              <form id="contactForm" class="space-y-6">
+              <form id="contactForm" action="https://formsubmit.co/deanndraper@gmail.com" method="POST" class="space-y-6" target="_blank">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label for="name" class="block text-gray-700 text-sm font-medium mb-2">Full Name *</label>
@@ -706,7 +751,8 @@
                   <div>
                     <label for="email" class="block text-gray-700 text-sm font-medium mb-2">Email Address *</label>
                     <input type="email" id="email" name="email" placeholder="your.email@example.com" 
-                      class="w-full border border-gray-300 rounded-lg py-3 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors" required>
+                      class="w-full border border-gray-300 rounded-lg py-3 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors" 
+                      required>
                   </div>
                 </div>
                 
@@ -891,4 +937,4 @@
     });
   </script>
 </body>
-</html>> 
+</html>
