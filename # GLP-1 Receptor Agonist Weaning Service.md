@@ -51,9 +51,8 @@ Contact us for more details and to find the best option for you.
 ## Contact Us
 
 To learn more about our GLP-1 receptor agonist weaning service or to schedule an initial consultation, please contact us:
-
-- **Phone**: (123) 456-7890
-- **Email**: info@glp1weaning.com
+ 
+- **Email**: beyondweightmeds@gmail.com
 
 ---
 

@@ -1,3 +1,28 @@
+docker run -it --rm --name n8n -p 5678:5678 \
+-e N8N_HOST=n8n.americanhypnosisonline.com \
+-e N8N_EDITOR_BASE_URL=https://n8n.americanhypnosisonline.com \
+-e N8N_WEBHOOK_URL=https://n8n.americanhypnosisonline.com \
+-e N8N_PROTOCOL=https \
+-v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
+
+
+Access blocked: Authorization Error
+
+deanndraper@gmail.com
+
+You can't sign in to this app because it doesn't comply with Google's OAuth 2.0 policy for keeping apps secure.
+
+You can let the app developer know that this app doesn't comply with one or more Google validation rules.
+Learn more about this error
+If you are a developer of Make Caption Grabber, see error details.
+Error 400: invalid_request
+
+Error 400: invalid_request
+Request details: redirect_uri=https://206.189.187.202/rest/oauth2-credential/callback flowName=GeneralOAuthFlow
+
+
+--------
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -775,22 +800,6 @@
             </div>
           </div>
           
-          <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/style.css" rel="stylesheet" />
-
-          <script type="module">
-          import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/chat.bundle.es.js';
-          
-          createChat({
-            webhookUrl: 'https://n8n.americanhypnosisonline.com/webhook/d4e94b54-f953-48f6-910d-db796d9e264b/chat'
-          });
-          </script> 
-
-
-
-
-
-
-
           <!-- Contact Form -->
           <div class="lg:w-2/3">
             <div class="bg-white rounded-xl shadow-md p-8 border border-gray-100">
@@ -857,6 +866,21 @@
       </div>
     </div>
   </section>
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/style.css" rel="stylesheet" />
+
+<script type="module">
+import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/chat.bundle.es.js';
+
+createChat({
+  webhookUrl: 'https://n8n.americanhypnosisonline.com:5678/webhook/d4e94b54-f953-48f6-910d-db796d9e264b/chat'
+});
+</script>
+
+
+
 
   <!-- Footer -->
   <footer class="bg-indigo-900 text-white py-12">
